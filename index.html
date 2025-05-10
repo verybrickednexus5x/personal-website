@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavier Tepeli</title>
     <style>
+        :root {
+            --primary-color: #2d3436;
+            --light-text: #dfe6e9;
+            --dark-text: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #f8f9fa;
+            --plane-bg: #e3f2fd;
+            --box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
         body {
-            background: #f5f5f5;
-            color: #333;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color);
+            color: var(--dark-text);
             line-height: 1.6;
         }
 
@@ -25,35 +35,35 @@
         }
 
         header {
-            background: #2d3436;
+            background: var(--primary-color);
             color: white;
             padding: 60px 0;
             text-align: center;
         }
 
         .name {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .subtitle {
-            font-size: 1.2em;
-            color: #dfe6e9;
+            font-size: 1.2rem;
+            color: var(--light-text);
         }
 
-        .section {
+        section {
             background: white;
             margin: 40px 0;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--box-shadow);
         }
 
         h2 {
-            color: #2d3436;
+            color: var(--primary-color);
             margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 1.8rem;
         }
 
         .interests {
@@ -64,7 +74,7 @@
         }
 
         .interest-card {
-            background: #f8f9fa;
+            background: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease;
@@ -75,14 +85,14 @@
         }
 
         .interest-title {
-            font-size: 1.2em;
-            color: #2d3436;
+            font-size: 1.2rem;
+            color: var(--primary-color);
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .plane-stats {
-            background: #e3f2fd;
+            background: var(--plane-bg);
             padding: 15px;
             border-radius: 8px;
             margin-top: 20px;
@@ -96,7 +106,7 @@
         }
 
         footer {
-            background: #2d3436;
+            background: var(--primary-color);
             color: white;
             text-align: center;
             padding: 20px;
@@ -105,10 +115,10 @@
 
         @media (max-width: 768px) {
             .name {
-                font-size: 2em;
+                font-size: 2rem;
             }
-            
-            .section {
+
+            section {
                 padding: 20px;
                 margin: 20px 0;
             }
@@ -118,55 +128,55 @@
 <body>
     <header>
         <div class="container">
-            <div class="name">Xavier Tepeli</div>
-            <div class="subtitle">Student | Aviation Enthusiast | Gamer</div>
+            <h1 class="name">Xavier Tepeli</h1>
+            <p class="subtitle">Student | Aviation Enthusiast | Gamer</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="section">
+    <main class="container">
+        <section>
             <h2>About Me</h2>
-            <p>Hi! I'm Xavier, a 13-year-old student at St Kevin's College in Toorak, Melbourne. I'm passionate about aviation, gaming, and technology.</p>
-        </div>
+            <p>Hi! I'm Xavier, a 13-year-old student. I'm passionate about aviation, gaming, and technology.</p>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>My Interests</h2>
             <div class="interests">
-                <div class="interest-card">
-                    <div class="interest-title">Aviation</div>
+                <article class="interest-card">
+                    <h3 class="interest-title">Aviation</h3>
                     <p>Aviation enthusiast with a particular interest in the Airbus A321XLR.</p>
                     <div class="plane-stats">
                         <strong>Favorite Aircraft: A321XLR</strong>
                         <p>The longest-range single-aisle airliner</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="interest-card">
-                    <div class="interest-title">Gaming</div>
+                <article class="interest-card">
+                    <h3 class="interest-title">Gaming</h3>
                     <p>Avid gamer enjoying:</p>
                     <ul>
                         <li>Minecraft</li>
                         <li>Ena's Dream BBQ</li>
                         <li>Roblox</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="interest-card">
-                    <div class="interest-title">Technology</div>
+                <article class="interest-card">
+                    <h3 class="interest-title">Technology</h3>
                     <p>Passionate about computers and learning new technologies.</p>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <div class="section cat-section">
+        <section class="cat-section">
             <h2>Meet Daisy</h2>
             <p>My wonderful cat companion who brings joy to our home.</p>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 Xavier Tepeli</p>
+            <p>&copy; 2025 Xavier Tepeli</p>
         </div>
     </footer>
 </body>
